@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>工合基金</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #fff; color: #111; line-height: 1.6; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+    header img { height: 40px; }
+    nav a { margin-left: 30px; text-decoration: none; color: #111; font-weight: 500; }
+    nav a:hover { color: #e00000; }
+    .lang-switch { margin-left: 30px; padding: 4px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; cursor: pointer; }
+    .hero { text-align: center; padding: 100px 20px 80px; background: linear-gradient(to right, #fff, #f9f9f9); }
+    .hero h1 { font-size: 42px; margin-bottom: 20px; color: #111; }
+    .hero p { font-size: 20px; color: #555; max-width: 700px; margin: 0 auto; }
+    .cta { margin-top: 40px; }
+    .cta a { padding: 12px 30px; background-color: #e00000; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background 0.3s ease; }
+    .cta a:hover { background-color: #b00000; }
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { margin-top: 10px; }
+      nav a { margin-left: 0; margin-right: 20px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 18px; }
+    }
+  </style>
+  <script>
+    function toggleLanguage() {
+      const current = window.location.pathname;
+      if (current.includes('-cn')) {
+        window.location.href = current.replace('-cn', '');
+      } else {
+        window.location.href = current.replace('.html', '-cn.html');
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="工合基金 Logo" />
+    <nav>
+      <a href="index-cn.html">首页</a>
+      <a href="about-cn.html">关于我们</a>
+      <a href="#portfolio">投资组合</a>
+      <a href="#insights">洞见</a>
+      <a href="#contact">联系</a>
+      <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>赋能创业者，共创未来。</h1>
+    <p>工合基金是一家专注于早期 AI、前沿技术和全球 SaaS 创业项目的风险投资机构，支持具备远见和全球化潜力的创业团队。</p>
+    <div class="cta">
+      <a href="#contact">联系我们</a>
+    </div>
+  </section>
+</body>
+</html>
