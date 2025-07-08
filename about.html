@@ -23,27 +23,146 @@
     }
   </style>
 </head>
+
 <body>
+
+  <header>
+    <img src="images/logo.png" alt="KungHo Fund Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="insights.html">Insights & News</a>
+      <a href="contact.html">Contact</a>
+      <button class="lang-switch" onclick="toggleLanguage()">中文</button>
+    </nav>
+  </header>
+  <style>
+    .logo {
+      height: 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #e00000;
+    }
+
+    nav a.active {
+      color: #e00000;
+      font-weight: 600;
+    }
+
+    .lang-switch {
+      margin-left: 30px;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function toggleLanguage() {
+      const current = window.location.pathname;
+      if (current.includes('-cn')) {
+        window.location.href = current.replace('-cn', '');
+      } else {
+        window.location.href = current.replace('.html', '-cn.html');
+      }
+    }
+  </script>
+
+
+
+
   <div class="container">
-    <h2>Our Vision</h2>
-    <p>KungHo Fund invests in visionary founders building technologies that matter. We believe AI-native innovation will define the next generation of global transformation.</p>
+    <h2>An initiative of Zino Ventures, the KungHo Fund name honors the term “Gung-ho,” meaning work together, in harmony.</h2>
+    <p>Zino Venture’s name is based on the Latin word “Sino,” which refers to Chinese culture, but with the “Z” for New Zealand. Zino is a symbol of innovation, flexibility and fearless global thinking.
+
+KungHo combines and honors the three significant cultures and countries that have greatly influenced the Fund’s founder, George Gong: China, New Zealand and the United States. Born in China, an immigrant to New Zealand and now living in the U.S., Mr. Gong wanted to set up a business that drew on the strengths and experiences from each country and use them to help start-ups grow.
+
+Gung-ho /ˈɡʌŋˈhoʊ/ is an English term meaning “enthusiastic” or “overzealous”. It is thought to have originated from the Chinese short-form of what were known in the 1930s as “Chinese Industrial Cooperatives”, 工合, meaning “work together”. Gung-ho is also sometimes anglicized as “kung-ho”. The term was picked up by United States Marine Corps Major Evans Carlson from his New Zealand friend, Rewi Alley, one of the founders of the Chinese Industrial Cooperatives. Later Carlson used gung-ho during his command of the 2nd Marine Raider Battalion. From there, it spread throughout the U.S. Marine Corps hence the association between the two, where it was used as an expression of spirit and into American society as a whole.</p>
     <h2>Investment Focus</h2>
     <div class="focus-list">
-      <div class="focus-item">AI Development Tools</div>
+      <div class="focus-item">AI Tools</div>
       <div class="focus-item">Intelligent Industry Applications</div>
-      <div class="focus-item">Cross-border SaaS</div>
+      <div class="focus-item">Deep AI Technologies</div>
     </div>
     <h2>Our Team</h2>
     <div class="team-grid">
       <div class="team-card">
-        <img src="images/team1.jpg" alt="Yu Zhang" />
-        <h4>Yu Zhang</h4>
-        <p>Managing Partner<br/>Ex-founder, 10+ years in AI startup & investment</p>
+        <img src="images/team1.jpg" alt="George Gong" />
+        <h4>George Gong</h4>
+        <p>Managing Partner & CEO<br/>
+Chairman, Zino Ventures
+Co-founder, Beyondsoft
+Managing Partner, Jubilee Capital Management
+Limited Partner, LearnLaunch EdTech Fund
+Former Board Member, Callaghan Innovation</p>
+        <a href="https://www.linkedin.com/in/george-gong/" target="_blank" style="
+         display: inline-block;
+         margin-top: 8px;
+         padding: 6px 12px;
+         background-color: #0077b5;
+         color: white;
+         text-decoration: none;
+         border-radius: 4px;
+         font-size: 14px;
+         font-weight: 500;">
+         LinkedIn
+      </a>    
       </div>
       <div class="team-card">
-        <img src="images/team2.jpg" alt="Lisa Chen" />
-        <h4>Lisa Chen</h4>
-        <p>Partner<br/>Previously at McKinsey & Sequoia Capital</p>
+        <img src="images/team2.jpg" alt="Shawn Ke" />
+        <h4>Shawn Ke </h4>
+        <p>Managing Partner & COO<br/>Previously at GF Securities & SZSE<br><br><br><br><br></p>
+        <a href="https://www.linkedin.com/in/shawn-ke-a881b7242/" target="_blank" style="
+         display: inline-block;
+         margin-top: 8px;
+         padding: 6px 12px;
+         background-color: #0077b5;
+         color: white;
+         text-decoration: none;
+         border-radius: 4px;
+         font-size: 14px;
+         font-weight: 500;">
+         LinkedIn
+      </a>      
+      </div>
+      <div class="team-card">
+        <img src="images/team3.jpg" alt="Ferris Lu" />
+        <h4>Ferris Lu</h4>
+        <p>Managing Partner<br/>Famous Angel Investor in China<br><br><br><br><br></p>
+       <a href="https://www.linkedin.com/in/ferris-lu-29410234/" target="_blank" style="
+         display: inline-block;
+         margin-top: 8px;
+         padding: 6px 12px;
+         background-color: #0077b5;
+         color: white;
+         text-decoration: none;
+         border-radius: 4px;
+         font-size: 14px;
+         font-weight: 500;">
+         LinkedIn
+      </a>      
       </div>
     </div>
   </div>

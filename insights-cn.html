@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>洞见与新闻 - 工合基金</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #111;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #e00000;
+      text-align: center;
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .post {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 30px;
+    }
+
+    .post h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .post h3:hover { color: #e00000; }
+    .summary { color: #333; font-weight: bold; }
+
+    .post p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .post time {
+      display: block;
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 12px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #e00000;
+      text-decoration: none;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    .blog-post .full-text {
+      display: none;
+      margin-top: 15px;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+  
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #e00000;
+}
+nav a.active {
+  color: #e00000;
+  font-weight: 600;
+}
+.lang-switch {
+  margin-left: 30px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+<img alt="KungHo Fund Logo" src="images/logo.png" style="height: 40px;"/>
+<nav>
+<a href="index-cn.html">首页</a>
+<a href="about-cn.html">关于我们</a>
+<a href="portfolio-cn.html">投资组合</a>
+<a class="active" href="insights-cn.html">洞见与新闻</a>
+<a href="contact-cn.html">联系</a>
+<button class="lang-switch" onclick="toggleLanguage()">EN</button>
+</nav>
+</header>
+
+<div class="container">
+<h2>洞见与新闻</h2>
+<div class="post-list">
+<!-- <div class="post">
+        <time datetime="2025-01-03">2025年1月3日</time>
+        <h3>CEO 致 DeepSeek 的寄语</h3>
+        <p>Since our first report in 2023, we have been emphasizing our insistence on investing in excellent entrepreneurs + the suitable application scenarios + unique data + operating in a way that takes full advantage of the U.S. and China.</p>
+        <a class="read-more" href="#">Read More</a>
+      </div>
+-->
+<div class="blog-post">
+<time datetime="2025-01-03">2025年1月3日</time>
+<h3>CEO 致 DeepSeek 的寄语</h3>
+<p class="summary">自2023年我们首次发布报告以来，我们始终坚持投资于优秀的创业者 + 合适的应用场景 + 独特的数据 + 发挥中美结合优势的运营方式。</p>
+<button onclick="toggleText('post1')">阅读全文</button>
+<div class="full-text" id="post1">
+<p>DeepSeek的最新发布在AI领域引起了广泛关注，被认为是一项可能颠覆现有AI格局的创新。它通过高效的模型架构，大幅降低计算和存储需求，同时保持性能；通过优化预训练语料，实现了大模型的低成本、快速训练。 DeepSeek的出现，挑战了传统AI公司“高投入、高算力”的研发模式，促使整个行业重新审视资源配置和技术战略。 深入观察DeepSeek，可以发现以下特点： DeepSeek有140名员工，全部为中国人，反映出中国AI人才储备的冰山一角； CEO为计算机硕士，是技术极客，显示出创始人对AI技术的热爱是成功关键； 公司具备万卡GPU规模的超大部署调优能力，显示出工程能力的重要性； 总部位于杭州，靠近阿里巴巴总部，说明其也受益于中国互联网产业的工程人才外溢效应。 正因为DeepSeek对行业的影响，我们更加坚信，优秀的中国AI创业者将在美国迅速涌现独角兽，现在正是投资的好时机。
+</p>
+</div>
+</div>
+
+<div class="blog-post">
+<time datetime="2024-04-10">2024年4月10日</time>
+<h3>MathGPTPro 入选 YC W24</h3>
+<p class="summary">MathGPTPro https://info.mathgptpro.com 是一个个性化学习平台，旨在利用人工智能提升学生学习效率和教师工作效率。首席执行官兼创始人岳天薇表示：“人工智能可以轻松完成许多任务，而人类在完成每项任务时都需要经历一个学习曲线。在科技日新月异的今天，我们该如何生存？……</p>
+<button onclick="toggleText('post2')">阅读全文</button>
+<div class="full-text" id="post2">
+<p>学会思考和适应是关键。我们鼓励学生和教师拥抱人工智能，将其作为获取灵感和提升生产力的工具。我们相信人工智能将把教育提升到一个新的水平。我们希望打破教育壁垒，展望未来，让每个人都能随时随地享受优质、实惠且个性化的学习体验。
+</p>
+</div>
+</div>
+
+<div class="blog-post">
+<time datetime="2023-07-28">2023年7月28日</time>
+<h3>新趋势：人工智能</h3>
+<p class="summary">ChatGPT3.5 于 2022 年 11 月发布，这项突破性的 LLM 技术带来了前所未有的 AI 创新浪潮。在过去的几个月里，新硬件、新算法、新 API、新模型、新应用和新平台以前所未有的速度被发明和推出。</p>
+<button onclick="toggleText('post3')">阅读全文</button>
+<div class="full-text" id="post3">
+<p>我们相信，改变机器处理信息方式的LLM技术必将改变人机关系，从而提供从根本上改变人与人之间关系的可能性，这意味着我们学习、工作、协作、沟通和组织的方式。这波机遇有可能引发一场比十年前移动互联网更深刻、更彻底的行业和社会变革。就已展现的AI技术能力而言，“AI将重塑所有商业应用”已成为现实。成功的AI应用必须具备：优秀的算法（通用GPT平台、OpenAI、Bard）；计算能力（云平台Azure、GCP、AWS）；独有的数据；合适的应用场景（行业应用）。我们的投资机会最有可能来自两个方向：应用类：以通用算法+公共算力为支撑，我们关注拥有独有数据和应用场景的初创公司。技术类：此外，我们关注能够最快吸收前沿AI技术的技术团队，即使其应用场景尚不明确。就像1996年的腾讯和FaceBook。
+</p>
+</div>
+</div>
+
+</div>
+<script>
+    function toggleText(id) {
+      const content = document.getElementById(id);
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    }
+  </script>
+</div>
+<script>
+  function toggleLanguage() {
+    const current = window.location.pathname;
+    if (current.includes('-cn')) {
+      window.location.href = current.replace('-cn', '');
+    } else {
+      window.location.href = current.replace('.html', '-cn.html');
+    }
+  }
+</script>
+</body>
+</html>

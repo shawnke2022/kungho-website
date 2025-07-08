@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights - KungHo Fund</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #111;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #e00000;
+      text-align: center;
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .post {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 30px;
+    }
+
+    .post h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .post h3:hover { color: #e00000; }
+    .summary { color: #333; font-weight: bold; }
+
+    .post p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .post time {
+      display: block;
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 12px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #e00000;
+      text-decoration: none;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    .blog-post .full-text {
+      display: none;
+      margin-top: 15px;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+  
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #e00000;
+}
+nav a.active {
+  color: #e00000;
+  font-weight: 600;
+}
+.lang-switch {
+  margin-left: 30px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+<img alt="KungHo Fund Logo" src="images/logo.png" style="height: 40px;"/>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="portfolio.html">Portfolio</a>
+<a class="active" href="insights.html">Insights & News</a>
+<a href="contact.html">Contact</a>
+<button class="lang-switch" onclick="toggleLanguage()">中文</button>
+</nav>
+</header>
+
+<div class="container">
+<h2>Insights & News</h2>
+<div class="post-list">
+<!-- <div class="post">
+        <time datetime="2025-01-03">Jan 3, 2025</time>
+        <h3>CEO's Message on DeepSeek</h3>
+        <p>Since our first report in 2023, we have been emphasizing our insistence on investing in excellent entrepreneurs + the suitable application scenarios + unique data + operating in a way that takes full advantage of the U.S. and China.</p>
+        <a class="read-more" href="#">Read More</a>
+      </div>
+-->
+<div class="blog-post">
+<time datetime="2025-01-03">Jan 3, 2025</time>
+<h3>CEO's Message on DeepSeek</h3>
+<p class="summary">Since our first report in 2023, we have been emphasizing our insistence on investing in excellent entrepreneurs + the suitable application scenarios + unique data + operating in a way that takes full advantage of the U.S. and China.</p>
+<button onclick="toggleText('post1')">Read More</button>
+<div class="full-text" id="post1">
+<p>DeepSeek's recent release has garnered a lot of attention in the AI space, and is seen as an innovation that could potentially disrupt the existing AI landscape. Through efficient model architecture, it significantly reduces computation and storage requirements while maintaining performance; and through optimization of the pre-training corpus, it achieves the goal of low-cost, fast training of large AI models.The emergence of DeepSeek questions the traditional AI company's high-input, high-calculation R&amp;D model, prompting the industry to re-examine its resource allocation and technology strategy.
+
+A closer look at DeepSeek reveals the following characteristics:
+DeepSeek employs 140 people, all of whom are Chinese. This indicates the iceberg of the Chinese talent pool in the AI industry.
+The CEO of DeepSeek is a geek with a Master’s degree in CS, indicating that the founder's love for AI technology is an important success factor.
+DeepSeek has the engineering capability of tuning ultra-large scale (10,000) GPUs deployments. This indicates that engineering capability is also a key success factor.
+DeepSeek is located in Hangzhou, near Alibaba’s HQ, which obviously suggest that DeepSeek also benefits from the spillover effect of engineering skills and talent from China's Internet industry.
+
+Because of DeepSeek's impact on the industry, we are even more convinced that it won’t be long before unicorns emerge in large numbers by the outstanding Chinese AI entrepreneurs in the US, and it's the right time to invest now.
+</p>
+</div>
+</div>
+
+<div class="blog-post">
+<time datetime="2024-04-10">Apr 10, 2024</time>
+<h3>MatheGPTPro, KungHo Fund’s latest portfolio startup, successfully made their name on the list of YCombinator W24.</h3>
+<p class="summary">MathGPTPro <a href="https://info.mathgptpro.com" target="_blank">https://info.mathgptpro.com</a> is a personalized learning platform that boosts student learning and teacher productivity with AI. <a href="https://www.linkedin.com/in/tianwei-yue" target="_blank">Tianwei Yue</a>, the CEO and founder said: "AI is capable of many things effortlessly, while humans need to go through a learning curve for every task. How shall we survive given rapidly changing technology? …</p>
+<button onclick="toggleText('post2')">Read More</button>
+<div class="full-text" id="post2">
+<p>Learning how to think and adapt is the key. We encourage both students and teachers to embrace AI as a tool to get inspiration and boost productivity. We believe AI will bring education to the next level. We want to dismantle educational barriers, we are envisioning a future where quality, affordable, and personalized learning experiences are accessible to all people at any time.”
+</p>
+</div>
+</div>
+
+<div class="blog-post">
+<time datetime="2023-07-28">Jul 28, 2023</time>
+<h3>New Trend: Artificial Intelligence</h3>
+<p class="summary">ChatGPT3.5 was released in November 2022, the ground-break LLM technology have brought a new wave of AI innovation never seen before. Over the past few months, new hardware, new algorithms, new API, new models, new apps, and new platforms have been invented and introduced at an unprecedented rate.</p>
+<button onclick="toggleText('post3')">Read More</button>
+<div class="full-text" id="post3">
+<p>We believe that LLM technology, which changes the way machines process information, will certainly change the human-machine relationship, thus offering the possibility to fundamentally change the human-human relationship, which means the ways we learn, work, collarabrate, communicate and organize. This wave of opportunity has the potential to set off a more profound and radical change in industry and society than the mobile Internet did 10 years ago.
+In terms of demonstrated AI technology capabilities, "AI will reinvent all business applications" has become an ongoing reality. A successful AI application must include:
+Excellent algorithms (general-purpose GPT platform, OpenAI, Bard)
+Computing power (cloud platforms Azure, GCP, AWS)
+Exclusively owned data
+Suitable application scenarios (industry applications)
+Our investment opportunities are most likely to come from two directions:
+Application category: supported by generic algorithms + public computing power, we want to focus on startups that have exclusively owned data and application scenarios.
+Technology category: In addition, we should focus on technology teams that can absorb cutting-edge A.I. the fastest, even if their application scenarios are not yet clear. Like Tencent and FaceBook in 1996.
+</p>
+</div>
+</div>
+
+</div>
+<script>
+    function toggleText(id) {
+      const content = document.getElementById(id);
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    }
+  </script>
+</div>
+<script>
+  function toggleLanguage() {
+    const current = window.location.pathname;
+    if (current.includes('-cn')) {
+      window.location.href = current.replace('-cn', '');
+    } else {
+      window.location.href = current.replace('.html', '-cn.html');
+    }
+  }
+</script>
+</body>
+</html>

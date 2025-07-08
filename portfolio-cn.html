@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - KungHo Fund</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #111;
+}
+    .container { max-width: 1080px; margin: 0 auto; padding: 60px 20px; }
+    h2 { font-size: 32px; margin-bottom: 20px; color: #e00000; text-align: center; }
+    .grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .card {
+width: 240px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 360px;
+}
+    .card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(255,255,255,0.2);
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+    .card img {
+      width: 100%;
+      height: 66px; max-height: 66px;
+      object-fit: contain; background-color: white; border-radius: 4px;
+      background: #fff;
+      padding: 20px;
+    }
+    .card h4 {
+  text-align: center;
+      font-size: 18px;
+      margin: 10px 0 4px;
+    }
+    .card p {
+  text-align: center;
+      font-size: 14px;
+      color: #333;
+      padding: 0 15px 20px; line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .grid { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="工合基金 Logo" class="logo" />
+    <nav>
+      <a href="index-cn.html">首页</a>
+      <a href="about-cn.html">关于我们</a>
+      <a href="portfolio-cn.html" class="active">投资组合</a>
+      <a href="insights-cn.html">洞察 & 新闻</a>
+      <a href="contact-cn.html">联系我们</a>
+      <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+    </nav>
+  </header>
+  <style>
+    .logo { height: 40px; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #e00000;
+    }
+    nav a.active {
+      color: #e00000;
+      font-weight: 600;
+    }
+    .lang-switch {
+      margin-left: 30px;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function toggleLanguage() {
+      const current = window.location.pathname;
+      if (current.includes('-cn')) {
+        window.location.href = current.replace('-cn', '');
+      } else {
+        window.location.href = current.replace('.html', '-cn.html');
+      }
+    }
+  </script>
+
+  <div class="container">
+    <h2>投资组合</h2>
+    <div class="grid">
+      
+        <div class="card" onclick="window.open('https://ventitech.ai', '_blank')">
+        <img src="images/venti_logo.png" alt="Venti Logo" />
+        <h4>Venti Technologies</h4>
+        <p>Venti provides the world’s safest and fastest goods transportation using robotic logistics to clean the planet and reduce costs.
+.</p>
+      </div>
+      <div class="card">
+        <img src="images/company2.png" alt="Scaling Intelligence Logo" />
+        <h4>Scaling Intelligence</h4>
+        <p>AI-driven molecular simulation platform for biotech research.</p>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://komiko.app', '_blank')">
+        <img src="images/komiko_logo.png" alt="Story Engine Logo" />
+        <h4>Story Engine</h4>
+        <p>Building AI creation tools and distribution platforms for comics and anime..</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://adsgency.ai', '_blank')">
+        <img src="images/adsgency_logo.png" alt="AdsGency Logo" />
+        <h4>AdsGency AI</h4>
+        <p>A single platform that brings together everything advertisers need—AI-powered ad creation, precise targeting, automation, real-time analytics and optimization.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://newurtopia.com', '_blank')">
+        <img src="images/urtopia_logo.png" alt="Urtopia Logo" />
+        <h4>Urtopia</h4>
+        <p>We use technology to redefine how people ride. With our innovations, a healthy, fun and sustainable lifestyle is right in front of you.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://realnose.ai', '_blank')">
+        <img src="images/realnose_logo.png" alt="RealNose Logo" />
+        <h4>RealNose.AI</h4>
+        <p>RealNose is pioneering machine olfaction, integrating AI and bionanotechnology to detect scent signatures with speed and precision.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://mathos.com', '_blank')">
+        <img src="images/mathos_logo.png" alt="mathos Logo" />
+        <h4>Mathos.AI</h4>
+        <p>AI Math Tutor.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://duckie.ai', '_blank')">
+        <img src="images/duckie_logo.png" alt="duckie Logo" />
+        <h4>Duckie.AI</h4>
+        <p>Duckie gives your support team all the information they need to resolve support tickets fast and independently.
+.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://basepilot.com', '_blank')">
+        <img src="images/basepilot_logo.png" alt="basepilot Logo" />
+        <h4>BasePilot</h4>
+        <p>AI workers to automate back office work.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card" onclick="window.open('https://minitable.net', '_blank')">
+        <img src="images/minitable_logo.png" alt="minitable Logo" />
+        <h4>Minitable</h4>
+        <p>Restaurant waitlist & reservation, and customer engagement system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -57,7 +57,7 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 40px 20px 20px;
       background: linear-gradient(to right, #fff, #f9f9f9);
     }
 
@@ -122,10 +122,10 @@
   <header>
     <img src="images/logo.png" alt="KungHo Fund Logo" />
     <nav>
-      <a href="home.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="insights.html">Insights</a>
+      <a href="insights.html">Insights & News</a>
       <a href="contact.html">Contact</a>
       <button class="lang-switch" onclick="toggleLanguage()">中文</button>
 
@@ -133,12 +133,76 @@
   </header>
 
   <section class="hero">
-    <h1>Empowering Founders. Building the Future.</h1>
-    <p>KungHo Fund is a venture capital firm backing early-stage startups in AI, deep tech, and global SaaS with bold visions and scalable impact.</p>
-    <div class="cta">
-      <a href="#contact">Get in Touch</a>
+    <h1>Invest in the U.S., Prosper Together</h1>
+    <p>Invest in the US tech startupswith Chinese founders.<br>Capitalize on the three strengths of USA: original tech, free market, and efficient capital market<br>Leverage the three strengths of Chinese: entrepreneurship, engineers and supply chain.</p>
+    
+  </section>
+
+  <section class="carousel">
+    <div class="carousel-track">
+      <img src="images/demo1.jpg" alt="Slide 1" />
+      <img src="images/demo2.jpg" alt="Slide 2" />
+      <img src="images/demo3.jpg" alt="Slide 3" />
+      <img src="images/demo4.jpg" alt="Slide 4" />
+      <img src="images/demo5.jpg" alt="Slide 5" />
+      <img src="images/demo6.jpg" alt="Slide 6" />
+      <img src="images/demo7.jpg" alt="Slide 7" />
+      <img src="images/demo8.jpg" alt="Slide 8" />
+      <img src="images/demo9.jpg" alt="Slide 9" />
+      <img src="images/demo10.jpg" alt="Slide 10" />
     </div>
   </section>
+  
+  
+  
+  <style>
+    .carousel {
+      overflow: hidden;
+      background: #f9f9f9;
+      padding: 0;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scroll-left 60s linear infinite;
+      width: fit-content;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    .carousel-track img {
+      height: 320px;
+      width: auto;
+      border-radius: 0;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 768px) {
+      .carousel-track {
+        animation: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+
+      .carousel-track img {
+        scroll-snap-align: center;
+        height: 200px;
+      }
+    }
+  </style>
+
+
+
+
 
 <script>
   function toggleLanguage() {
